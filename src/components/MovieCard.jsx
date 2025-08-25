@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { addFavorite, removeFavorite } from "../store/favoritesSlice";
-import "./MovieCard.css"; // Importera CSS-filen
-
+import "./MovieCard.css";
 
 const MovieCard = ({ movie }) => {
   const dispatch = useDispatch();
@@ -12,15 +11,17 @@ const MovieCard = ({ movie }) => {
     <div className="movie-card">
       <h3>{movie.Title}</h3>
       <img src={movie.Poster} alt={movie.Title} />
-      {isFavorite ? (
-        <button onClick={() => dispatch(removeFavorite(movie.imdbID))}>
-          ❌ Ta bort från favoriter
-        </button>
-      ) : (
-        <button onClick={() => dispatch(addFavorite(movie))}>
-          ⭐ Lägg till i favoriter
-        </button>
-      )}
+      <div className="movie-card-actions">
+        {isFavorite ? (
+          <button onClick={() => dispatch(removeFavorite(movie.imdbID))}>
+            ❌ Ta bort från favoriter
+          </button>
+        ) : (
+          <button onClick={() => dispatch(addFavorite(movie))}>
+            ⭐ Lägg till i favoriter
+          </button>
+        )}
+      </div>
     </div>
   );
 };
