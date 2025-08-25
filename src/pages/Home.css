@@ -1,5 +1,58 @@
+body {
+  background: linear-gradient(135deg, #e0e7ef 0%, #3a7bd5 100%);
+  min-height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 40px;
+  color: #2c2f32;
+  text-shadow: 1px 1px 8px #fff;
+}
+
+.search-bar {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  margin: 30px auto;
+  display: flex; justify-content: center;
+  justify-content: center;
+  max-width: 500px;
+}
+
+.search-bar button {
+  background: linear-gradient(90deg, #ff5f6d 0%, #ffc371 100%);
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(255, 95, 109, 0.15);
+  transition: background 0.3s, transform 0.2s;
+}
+
+.search-bar button:hover {
+  background: linear-gradient(90deg, #ffc371 0%, #ff5f6d 100%);
+  transform: scale(1.05);
+}
+
 .movie-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 20px;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw; /* Gör att innehållet tar hela sidans bredd */
+}
+
